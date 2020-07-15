@@ -2,6 +2,8 @@
 
 > Nên cài đặt python3 và ansible trong venv
 
+> Có thể chạy `docker` hoặc `podman` 
+
 ## Mục tiêu LAB
 - Mô hình này sử dụng 3 server, trong đó:
 - Host `ceph01` cài đặt `ceph-ansible`, `ceph-mon`,` ceph-osd`, `ceph-mgr`

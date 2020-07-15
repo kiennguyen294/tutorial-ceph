@@ -1,5 +1,26 @@
 # Cài đặt check_mk
 
+## extensions
+https://github.com/uncelvel/check_mk_extensions
+
+## Bổ sung plugin check trên checkMK server 
+```sh 
+yum install wget -y 
+su monitoring
+wget https://github.com/uncelvel/check_mk_extensions/raw/master/ceph/ceph-7.6.mkp
+wget https://github.com/uncelvel/check_mk_extensions/raw/master/json/json-2.0.mkp
+
+# Cài đặt 
+check_mk -P install ceph-7.6.mkp
+check_mk -P install json-2.0.mkp
+
+# Kiểm tra 
+check_mk -P list ceph
+
+# Replace 
+rm -rf local/share/check_mk/checks/cephosd 
+wget https://raw.githubusercontent.com/uncelvel/tutorial-ceph/master/docs/monitor/check_mk/extensions/cephosd -O local/share/check_mk/checks/cephosd
+```
 
 # Bổ sung agent check_mk ceph 
 
