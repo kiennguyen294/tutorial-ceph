@@ -1,6 +1,5 @@
 # Hướng dẫn cài đặt CEPH sử dụng `ceph-ansible` từ repo 
 
-## 
 - Phiên bản cài đặt : Ceph Nautilus
 - Host `ceph01` cài đặt `ceph-ansible`, `ceph-mon`,` ceph-osd`, `ceph-mgr`
 - Host `ceph02` cài đặt `ceph-osd`, `grafana-server` (Monitor)
