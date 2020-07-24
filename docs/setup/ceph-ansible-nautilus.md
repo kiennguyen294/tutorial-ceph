@@ -230,7 +230,6 @@ ceph_iscsi_firewall_zone: public
 ceph_dashboard_firewall_zone: public
 ceph_rgwloadbalancer_firewall_zone: public
 
-
 ## Packages
 
 ## Install
@@ -255,6 +254,8 @@ ceph_conf_overrides:
 ## CephFS
 
 ## NFS-Ganesha
+
+## CephRGW
 
 ## Multisite -RGW
 
@@ -431,7 +432,6 @@ ceph_iscsi_firewall_zone: public
 ceph_dashboard_firewall_zone: public
 ceph_rgwloadbalancer_firewall_zone: public
 
-
 ## Packages
 
 ## Install
@@ -456,6 +456,8 @@ ceph_conf_overrides:
 ## CephFS
 
 ## NFS-Ganesha
+
+## CephRGW
 
 ## Multisite -RGW
 

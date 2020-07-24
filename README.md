@@ -32,7 +32,8 @@ Ceph-deploy
 - [Cài đặt Ceph-RadosGW HA bản Nautilus](docs/setup/ceph-radosgw.md)
 
 Ceph-Ansible
-- [Ceph Ansible Nautilus](docs/setup/ceph-ansible-nautilus.md)
+- [Ceph Ansible Nautilus RPMsource](docs/setup/ceph-ansible-nautilus.md)
+- [Ceph Ansible Nautilus Gitsource](docs/setup/ceph-ansible-nautilus-2.md)
 - [Ceph Ansible Nautilus- Cài đặt thêm RGW](docs/setup/ceph-ansible-nautilus-rgw.md)
 
 # Tài liệu vận hành tích hợp
