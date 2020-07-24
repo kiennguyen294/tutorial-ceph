@@ -322,10 +322,34 @@ Failed-over
 
 Failed-back
 - Depromote các images của cụm SiteB trên Storage SiteB (Chuyển Primary thành Secondary trên cụm SiteB sau khi khôi phục nhằm đồng bộ ngược dữ liệu về)
+- Depromote các images của cụm SiteB trên Storage SiteA (Chuyển Primary thành Secondary trên cụm SiteA để đồng bộ dữ liệu ngược lại)
 - Promote các images của cụm SiteB trên Storage SiteB (Chuyển Secondary thành Primary trên cụm SiteB sau khi đồng bộ dữ liệu xong)
-- Depromote các images của cụm SiteB trên Storage SiteA (Chuyển Primary thành Secondary trên cụm SiteA)
 - Xóa XML cũ trên cụm SiteA (Không thực hiện xóa VM)
 - Start VM lại trên cụm SiteB
+
+## Các câu lệnh hay thao tác cơ bản 
+```sh 
+# Check status 
+rbd mirror pool info {pool} 
+rbd mirror pool status {pool} 
+rbd mirror pool status {pool} --verbose
+rbd mirror image status {pool}/{image}
+
+# Demote image 
+rbd mirror image demote {pool}/{image}
+
+# Promote 
+rbd mirror image promote {pool}/{image}
+
+# Force promote (Storage DR)
+rbd mirror image promote --force {pool}/{image}
+```
+
+
+# Cấu hình tự động enable journaling 
+```sh 
+rbd_default_features = 125
+```
 
 # Các tham số cấu hình của rbd-mirror
 ```sh 
@@ -333,7 +357,7 @@ Failed-back
 did not load config file, using default settings.
 bluestore_bluefs_env_mirror = false
 debug_rbd_mirror = 0/5
-rbd_mirror_concurrent_image_deletions = 1
+rbd_mirror_concurrent_image_deletions = 1 
 rbd_mirror_concurrent_image_syncs = 5
 rbd_mirror_delete_retry_interval = 30.000000
 rbd_mirror_image_policy_migration_throttle = 300

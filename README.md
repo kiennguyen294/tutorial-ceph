@@ -34,8 +34,6 @@ Ceph-deploy
 Ceph-Ansible
 - [Ceph Ansible Nautilus](docs/setup/ceph-ansible-nautilus.md)
 - [Ceph Ansible Nautilus- Cài đặt thêm RGW](docs/setup/ceph-ansible-nautilus-rgw.md)
-- [Ceph Ansible Nautilus- Add/Modify ceph config](docs/setup/ceph-ansible-nautilus-ceph-conf.md)
-- [Ceph Ansible Nautilus base containerized](docs/setup/ceph-ansible-nautilus-container.md)
 
 # Tài liệu vận hành tích hợp
 
