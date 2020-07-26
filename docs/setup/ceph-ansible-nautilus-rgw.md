@@ -46,6 +46,11 @@ Update bổ sung `group_vars/all.ym`
 radosgw_interface: eth1
 ```
 
+Kiểm tra lại toàn bộ cấu hình yml
+```sh 
+cat group_vars/*.yml | egrep -v '^$|^#'
+```
+
 Update ceph
 ```sh 
 # Bare-metal

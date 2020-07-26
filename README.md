@@ -33,8 +33,9 @@ Ceph-deploy
 
 Ceph-Ansible
 - [Ceph Ansible Nautilus RPMsource](docs/setup/ceph-ansible-nautilus.md)
-- [Ceph Ansible Nautilus Gitsource](docs/setup/ceph-ansible-nautilus-2.md)
-- [Ceph Ansible Nautilus- Cài đặt thêm RGW](docs/setup/ceph-ansible-nautilus-rgw.md)
+- [Ceph Ansible Nautilus Gitsource](docs/setup/ceph-ansible-nautilus-gitsource.md)
+- [Ceph Ansible Nautilus Cài đặt thêm RGW](docs/setup/ceph-ansible-nautilus-rgw.md)
+- [Ceph Ansible Nautilus Cài đặt thêm MDS](docs/setup/ceph-ansible-nautilus-mds.md)
 
 # Tài liệu vận hành tích hợp
 

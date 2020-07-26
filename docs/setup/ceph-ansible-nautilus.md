@@ -193,7 +193,7 @@ cat <<EOF > /usr/share/ceph-ansible/inventory_hosts
 EOF
 ```
 
-Tạo `all.yml`
+Tạo `group_vars/all.yml`
 ```sh
 cat <<EOF > group_vars/all.yml
 ## General
@@ -205,16 +205,16 @@ fetch_directory: fetch/
 cluster: ceph
 
 mon_group_name: mons
+mgr_group_name: mgrs
 osd_group_name: osds
+grafana_server_group_name: grafana-server
 rgw_group_name: rgws
 mds_group_name: mdss
 nfs_group_name: nfss
 rbdmirror_group_name: rbdmirrors
 client_group_name: clients
 iscsi_gw_group_name: iscsigws
-mgr_group_name: mgrs
 rgwloadbalancer_group_name: rgwloadbalancers
-grafana_server_group_name: grafana-server
 
 ## ------- Firewalld
 configure_firewall: True
@@ -407,16 +407,16 @@ fetch_directory: fetch/
 cluster: ceph
 
 mon_group_name: mons
+mgr_group_name: mgrs
 osd_group_name: osds
+grafana_server_group_name: grafana-server
 rgw_group_name: rgws
 mds_group_name: mdss
 nfs_group_name: nfss
 rbdmirror_group_name: rbdmirrors
 client_group_name: clients
 iscsi_gw_group_name: iscsigws
-mgr_group_name: mgrs
 rgwloadbalancer_group_name: rgwloadbalancers
-grafana_server_group_name: grafana-server
 
 ## ------- Firewalld
 configure_firewall: True
