@@ -481,6 +481,24 @@ ceph mds stat
 ceph fs flag set enable_multiple true --yes-i-really-mean-it
 ```
 
+- Xóa Cluster 
+```sh 
+systemctl stop ceph-mds.target
+killall ceph-mds
+
+ceph mds cluster_down
+ceph mds fail 0
+
+ceph fs rm <cephfs name> --yes-i-really-mean-it
+
+ceph osd pool delete <cephfs data pool> <cephfs data pool> --yes-i-really-really-mean-it
+ceph osd pool delete <cephfs metadata pool> <cephfs metadata pool> --yes-i-really-really-mean-it
+
+rm -rf "/var/lib/ceph/mds/<cluster-metadata server>"
+
+ceph auth del mds."$hostname"
+```
+
 ## Thao tác trên PG
 
 - Dump toàn bộ thông tin PG trên cụm 
