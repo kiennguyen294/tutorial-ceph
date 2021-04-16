@@ -358,6 +358,7 @@ rbd rm {pool-name}/{images}
 ```sh 
 rbd export --rbd-concurrent-management-ops 20 --pool={pool-name} {images} {images}.img
 ```
+> 20 MB/s(data) ~ 160Mbps(bw) ~ client 44 op/s rd(ceph)
 
 - Import volume từ file (Lưu ý định dạng file `raw` nếu là VM disk)
 ```sh 
