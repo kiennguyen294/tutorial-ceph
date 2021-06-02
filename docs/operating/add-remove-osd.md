@@ -41,10 +41,15 @@
 - Unmount LVM Volume group
 
 `umount /var/lib/ceph/osd/ceph-{osd-num}`
+- Kiểm tra vg của OSD
 
+`ceph-volume lvm list`
+
+![vgdiskplay](../../images/ceph-operation/001-vgdisplay.png)
 - Xóa bỏ LVM Volume Group của OSD
 
 `vgremove ceph-...`
+
 
 ## 3. Add mons
 
